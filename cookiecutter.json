@@ -1,7 +1,7 @@
 {
     "sketch_name": "My Sketch",
     "sketch_slug": "{{ cookiecutter.sketch_name|lower|replace(' ', '_') }}",
-    "paper_size": "a4",
+    "page_size": "a4",
     "landscape": ["False", "True"],
     "preferred_unit": "cm"
 }
