@@ -1,2 +1,3 @@
-# vsketch-template
-Template sketch for `vsketch init`
+# vsketch template
+
+Template sketch for `vsketch init`.
