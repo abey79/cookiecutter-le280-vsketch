@@ -1,14 +1,16 @@
 import vsketch
 
 
-def setup(vsk: vsketch.Vsketch) -> None:
-    vsk.size("{{cookiecutter.page_size}}", landscape={{cookiecutter.landscape}})
-    vsk.scale("{{cookiecutter.preferred_unit}}")
+class SimpleSketch(vsketch.Vsketch):
+    # Sketch parameters:
+    # radius = vsketch.Param(2.0)
 
+    def draw(self) -> None:
+        self.size("{{cookiecutter.page_size}}", landscape={{cookiecutter.landscape}})
+        self.scale("{{cookiecutter.preferred_unit}}")
 
-def draw(vsk: vsketch.Vsketch) -> None:
-    pass
+        # implement you sketch here
+        # self.circle(0, 0, self.radius(), mode="radius)
 
-
-def finalize(vsk: vsketch.Vsketch) -> None:
-    vsk.vpype("linemerge linesort")
+    def finalize(self) -> None:
+        self.vpype("linemerge linesimplify reloop linesort")
