@@ -9,7 +9,7 @@ class SimpleSketch(vsketch.Vsketch):
         self.size("{{cookiecutter.page_size}}", landscape={{cookiecutter.landscape}})
         self.scale("{{cookiecutter.preferred_unit}}")
 
-        # implement you sketch here
+        # implement your sketch here
         # self.circle(0, 0, self.radius(), mode="radius)
 
     def finalize(self) -> None:
