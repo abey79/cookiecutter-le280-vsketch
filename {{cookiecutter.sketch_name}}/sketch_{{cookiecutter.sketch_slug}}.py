@@ -10,7 +10,7 @@ class SimpleSketch(vsketch.Vsketch):
         self.scale("{{cookiecutter.preferred_unit}}")
 
         # implement your sketch here
-        # self.circle(0, 0, self.radius(), mode="radius)
+        # self.circle(0, 0, self.radius(), mode="radius")
 
     def finalize(self) -> None:
         self.vpype("linemerge linesimplify reloop linesort")
