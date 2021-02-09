@@ -1,7 +1,7 @@
 import vsketch
 
 
-class SimpleSketch(vsketch.Vsketch):
+class {{cookiecutter.class_name}}(vsketch.Vsketch):
     # Sketch parameters:
     # radius = vsketch.Param(2.0)
 
