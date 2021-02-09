@@ -20,4 +20,4 @@ if __name__ == "__main__":
     vsk = {{cookiecutter.class_name}}()
     vsk.draw()
     vsk.finalize()
-    vsk.display(mode="matplotlib")
+    vsk.display()
