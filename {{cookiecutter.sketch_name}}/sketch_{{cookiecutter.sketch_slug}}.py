@@ -1,7 +1,7 @@
 import vsketch
 
 
-class {{cookiecutter.class_name}}Sketch(vsketch.Vsketch):
+class {{cookiecutter.class_name}}(vsketch.Vsketch):
     # Sketch parameters:
     # radius = vsketch.Param(2.0)
 
@@ -14,3 +14,10 @@ class {{cookiecutter.class_name}}Sketch(vsketch.Vsketch):
 
     def finalize(self) -> None:
         self.vpype("linemerge linesimplify reloop linesort")
+
+
+if __name__ == "__main__":
+    vsk = {{cookiecutter.class_name}}()
+    vsk.draw()
+    vsk.finalize()
+    vsk.display(mode="matplotlib")
