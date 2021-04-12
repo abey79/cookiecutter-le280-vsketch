@@ -10,7 +10,7 @@ class {{cookiecutter.class_name}}(vsketch.SketchClass):
         vsk.scale("{{cookiecutter.preferred_unit}}")
 
         # implement your sketch here
-        # vsk.circle(0, 0, self.radius(), mode="radius")
+        # vsk.circle(0, 0, self.radius, mode="radius")
 
     def finalize(self, vsk: vsketch.Vsketch) -> None:
         vsk.vpype("linemerge linesimplify reloop linesort")
