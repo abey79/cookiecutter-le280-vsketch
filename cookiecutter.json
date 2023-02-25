@@ -1,8 +1,5 @@
 {
     "sketch_name": "My Sketch",
     "sketch_slug": "{{ cookiecutter.sketch_name|lower|replace(' ', '_')|replace('-', '_') }}",
-    "class_name": "{{ cookiecutter.sketch_name|replace('_', ' ')|replace('-', ' ')|title|replace(' ', '') }}Sketch",
-    "page_size": "a4",
-    "landscape": ["False", "True"],
-    "preferred_unit": "cm"
+    "class_name": "Sketch{{ cookiecutter.sketch_name|replace('_', ' ')|replace('-', ' ')|title|replace(' ', '') }}",
 }

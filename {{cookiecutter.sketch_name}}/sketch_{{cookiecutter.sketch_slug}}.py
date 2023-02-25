@@ -1,19 +1,25 @@
 import vsketch
 
+import vpype as vp
+
 
 class {{cookiecutter.class_name}}(vsketch.SketchClass):
-    # Sketch parameters:
-    # radius = vsketch.Param(2.0)
+    export_page_size = vsketch.Param("a5", choices=vp.PAGE_SIZES.keys())
+    export_margin = vsketch.Param(1.5, unit="cm", step=0.5)
 
     def draw(self, vsk: vsketch.Vsketch) -> None:
-        vsk.size("{{cookiecutter.page_size}}", landscape={{cookiecutter.landscape}})
-        vsk.scale("{{cookiecutter.preferred_unit}}")
+        vsk.size("500x500", landscape=False, center=False)
 
-        # implement your sketch here
-        # vsk.circle(0, 0, self.radius, mode="radius")
+        # Your code here
+
+        vsk.vpype("crop 0 0 500 500")
 
     def finalize(self, vsk: vsketch.Vsketch) -> None:
-        vsk.vpype("linemerge linesimplify reloop linesort")
+        vsk.vpype(
+            f"rect 0 0 500 500 text -p 500 513 -s 11 -a right {{cookiecutter.cookiecutter.sketch_name}} "
+            f"layout -m {self.export_margin} -v top {self.export_page_size} "
+            "linemerge linesimplify reloop linesort"
+        )
 
 
 if __name__ == "__main__":
