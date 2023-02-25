@@ -1,5 +1,5 @@
 {
     "sketch_name": "My Sketch",
     "sketch_slug": "{{ cookiecutter.sketch_name|lower|replace(' ', '_')|replace('-', '_') }}",
-    "class_name": "Sketch{{ cookiecutter.sketch_name|replace('_', ' ')|replace('-', ' ')|title|replace(' ', '') }}",
+    "class_name": "Sketch{{ cookiecutter.sketch_name|replace('_', ' ')|replace('-', ' ')|title|replace(' ', '') }}"
 }
