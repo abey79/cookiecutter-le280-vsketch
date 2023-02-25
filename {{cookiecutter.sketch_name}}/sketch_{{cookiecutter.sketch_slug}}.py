@@ -16,7 +16,7 @@ class {{cookiecutter.class_name}}(vsketch.SketchClass):
 
     def finalize(self, vsk: vsketch.Vsketch) -> None:
         vsk.vpype(
-            f"rect 0 0 500 500 text -p 500 513 -s 11 -a right {{cookiecutter.cookiecutter.sketch_name}} "
+            f"rect 0 0 500 500 text -p 500 513 -s 11 -a right {{cookiecutter.sketch_name}} "
             f"layout -m {self.export_margin} -v top {self.export_page_size} "
             "linemerge linesimplify reloop linesort"
         )
