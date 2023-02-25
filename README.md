@@ -1,3 +1,3 @@
-# vsketch template
+# le280 template
 
-Template sketch for the [vsketch](https://github.com/abey79/vsketch) project management tools.
+Template sketch for the le280-vsketch project
