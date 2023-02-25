@@ -12,7 +12,7 @@ class {{cookiecutter.class_name}}(vsketch.SketchClass):
 
         # Your code here
 
-        vsk.vpype("crop 0 0 500 500")
+        vsk.vpype("color black crop 0 0 500 500")
 
     def finalize(self, vsk: vsketch.Vsketch) -> None:
         vsk.vpype(
